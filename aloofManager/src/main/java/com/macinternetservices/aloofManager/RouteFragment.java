@@ -113,7 +113,7 @@ public class RouteFragment extends SupportMapFragment implements OnMapReadyCallb
             @Override
             public void onServiceReady(OkHttpClient client, Retrofit retrofit, WebService service) {
                 //service.getPositions(deviceId, lastTransitionEndTime, lastTransitionEndTime).enqueue(new WebServiceCallback<List<Position>>(getContext()) {
-                service.getPositions(getArguments().getString("deviceId"), getArguments().getString("lastTransitionEndTime"), getArguments().getString("lastTransitionEndTime")).enqueue(new WebServiceCallback<List<Position>>(getContext()) {
+                service.getPositions(getArguments().getString("deviceId"), getArguments().getString("lastTransitionEndTime"), getArguments().getString("lastTransitionStartTime")).enqueue(new WebServiceCallback<List<Position>>(getContext()) {
 
                     @Override
                     public void onSuccess(Response<List<Position>> response) {
