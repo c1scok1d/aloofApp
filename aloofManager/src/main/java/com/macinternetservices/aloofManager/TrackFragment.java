@@ -20,6 +20,8 @@ import java.util.List;
 import okhttp3.OkHttpClient;
 import retrofit2.Response;
 import retrofit2.Retrofit;
+import static com.macinternetservices.aloofManager.MainFragment.trackedDevice;
+
 
 
 public class TrackFragment extends SupportMapFragment implements OnMapReadyCallback {
@@ -71,7 +73,7 @@ public class TrackFragment extends SupportMapFragment implements OnMapReadyCallb
                         if(response.body() != null){
                         for (Tracking tracking : response.body()) {
                             //tracking = true;
-                            String trackedDevice = tracking.getDeviceId().toString();
+                            trackedDevice = tracking.getDeviceId().toString();
                             CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(tracking.getLatitude(), tracking.getLongitude()));
                             CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
                             //marker.showInfoWindow();
@@ -79,7 +81,7 @@ public class TrackFragment extends SupportMapFragment implements OnMapReadyCallb
                             map.animateCamera(zoom);
                             //marker.showInfoWindow();
                             //displayRoute(/*getContext()*/);
-                            Toast.makeText(getContext(), "tracking.getId: " + tracking.getId(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "Now Tracking: " + tracking.getId(), Toast.LENGTH_SHORT).show();
                             }
 
                         }
