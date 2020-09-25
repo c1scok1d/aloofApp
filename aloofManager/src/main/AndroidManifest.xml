@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.macinternetservices.aloofManager" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_logo_foreground"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:persistent="true"
+        tools:replace="android:name,android:icon">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAr-MP4NvIReNR8jnfI4l1ajOCQyJSn9Mg" />
+
+        <activity
+            android:name=".LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity" />
+
+        <activity
+            android:name=".DevicesActivity"
+            android:label="@string/devices_title" />
+
+        <activity
+            android:name=".SendCommandActivity"
+            android:label="@string/send_command_title" />
+
+        <activity
+            android:name=".AddDeviceActivity"
+            android:label="Add Device" />
+
+        <activity
+            android:name=".RouteActivity"
+            android:label="View Route" />
+
+        <activity
+            android:name=".AddGeoFenceActivity"
+            android:label="Add Location Alert" />
+
+        <activity
+            android:name=".DelDeviceActivity"
+            android:label="Delete Device" />
+
+        <activity
+            android:name=".EditDeviceActivity"
+            android:label="Edit Device" />
+
+        <activity
+            android:name=".GeofencesActivity"
+            android:label="Edit Location Alerts" />
+
+        <activity
+            android:name=".TrackActivity"
+            android:label="Tracking" />
+
+        <activity
+            android:name=".PermissionRationalActivity"
+            android:label="Activity Permission" />
+
+        <service android:name=".LocationService"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <!-- service android:name=".TransitionService"
+            android:enabled="true"
+            android:exported="true"/ -->
+
+        <receiver android:name=".ActivityTransitionBroadcastReceiver"
+            android:exported="false"
+            android:permission="com.google.android.gms.permission.ACTIVITY_RECOGNITION">
+            <intent-filter>
+                <action android:name="org.traccar.manager.ACTION_PROCESS_ACTIVITY_TRANSITIONS" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

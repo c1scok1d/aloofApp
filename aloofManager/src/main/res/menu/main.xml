@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_status"
+        android:title="@string/menu_status"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_preferences"
+        android:title="Preferences"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_client"
+        android:title="Client Settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_add"
+        android:title="Add Device"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/action_devices"
+        android:title="@string/devices_title"
+        app:showAsAction="ifRoom" />
+
+    <group>
+        <item
+            android:id="@+id/action_transition"
+            android:title="Enable Transition Alerts"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_add_geofence"
+            android:title="Add Location Alert"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_edit_geofence"
+            android:title="Edit Location Alert"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_clear"
+            android:title="Clear Proximity Alert"
+            app:showAsAction="never" />
+    </group>
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/logout_title"
+        app:showAsAction="never" />
+</menu>
+
