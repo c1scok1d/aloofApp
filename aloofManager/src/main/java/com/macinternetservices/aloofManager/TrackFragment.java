@@ -26,6 +26,7 @@ import static com.macinternetservices.aloofManager.MainFragment.trackedDevice;
 
 public class TrackFragment extends SupportMapFragment implements OnMapReadyCallback {
     private GoogleMap map;
+    private String deviceId;
 
     @Override
     public void onCreate(Bundle savedInstance) {
@@ -34,6 +35,14 @@ public class TrackFragment extends SupportMapFragment implements OnMapReadyCallb
         getMapAsync(this);
 
         Bundle transitionDataBundle = this.getArguments();
+        if(transitionDataBundle != null) {
+
+            deviceId = getArguments().getString("deviceId");
+            //String lastTransitionEndTime = getArguments().getString("lastTransitionEndTime");
+            //String lastTransitionStartTime = getArguments().getString("lastTransitionStartTime");
+        } else{
+            Log.e("RouteFragment", "transitionDataBundle is null");
+        }
     }
 
     @Override
@@ -66,7 +75,7 @@ public class TrackFragment extends SupportMapFragment implements OnMapReadyCallb
 
             @Override
             public void onServiceReady(OkHttpClient client, Retrofit retrofit, WebService service) {
-                service.getDeviceTracking(getArguments().getString("deviceId")).enqueue(new WebServiceCallback<List<Tracking>>(getContext()) {
+                service.getDeviceTracking(deviceId).enqueue(new WebServiceCallback<List<Tracking>>(getContext()) {
                     @Override
                     public void onSuccess(Response<List<Tracking>> response) {
                         Log.e("Tracking", "Response: " +response.body());
