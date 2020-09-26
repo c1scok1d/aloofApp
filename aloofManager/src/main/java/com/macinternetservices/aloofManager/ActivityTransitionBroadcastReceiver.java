@@ -56,6 +56,8 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     Boolean stillNotified = false;
     Date lastTransitionEndTime, stillEndTime, stillStartTime, walkStartTime, walkEndTime, runStartTime, runEndTime, bikeStartTime,
     bikeEndTime, driveStartTime, driveEndTime, lastTransitionStartTime;
+    String deviceId = "1051";
+    Points foo;
 
     //get deviceId
     //String deviceId = whatever.getDeviceId
@@ -159,7 +161,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
                         walkStartTime = Calendar.getInstance().getTime();
                         lastTransitionStartTime = walkStartTime;
-                        transitionStartNotification(context,trackedDevice+" has left "+bldgno[0]+" "+street[0]+" walking");
+                        transitionStartNotification(context,trackedDevice+" is walking", deviceId);
                         stillNotified = false;
                     } else if (event.getActivityType() == DetectedActivity.WALKING && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT){
                         walkEndTime = Calendar.getInstance().getTime();
@@ -195,7 +197,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
                         runStartTime = Calendar.getInstance().getTime();
                         lastTransitionStartTime = runStartTime;
-                        transitionStartNotification(context,trackedDevice+" is running on or near" +bldgno[0]+" "+street[0]);
+                        transitionStartNotification(context,trackedDevice+" is running", deviceId);
                         stillNotified = false;
                     } else if (event.getActivityType() == DetectedActivity.RUNNING && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT){
                         runEndTime = Calendar.getInstance().getTime();
@@ -228,7 +230,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
                         driveStartTime = Calendar.getInstance().getTime();
                         lastTransitionStartTime = driveStartTime;
-                        transitionStartNotification(context,trackedDevice+" is driving");
+                        transitionStartNotification(context,trackedDevice+" is driving", deviceId);
                         stillNotified = false;
                     } else if (event.getActivityType() == DetectedActivity.IN_VEHICLE && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT){
                         driveEndTime = Calendar.getInstance().getTime();
@@ -260,7 +262,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
                         bikeStartTime = Calendar.getInstance().getTime();
                         lastTransitionStartTime = bikeStartTime;
-                        transitionStartNotification(context,trackedDevice+" is biking");
+                        transitionStartNotification(context,trackedDevice+" is biking", deviceId);
                         stillNotified = false;
                     } else if (event.getActivityType() == DetectedActivity.ON_BICYCLE && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT){
                         bikeEndTime = Calendar.getInstance().getTime();
@@ -274,7 +276,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
         }
     }
 
-    private void transitionStartNotification(final Context mContext,final String message){
+    private void transitionStartNotification(final Context mContext,final String message, String deviceId){
 
         createNotificationChannel(mContext);
         Intent notificationIntent = new Intent(mContext, TrackActivity.class);
@@ -298,8 +300,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
         notifManager.notify(new Random().nextInt(), notification);
     }
 //figure out how to get deviceId
-String deviceId = "1051";
-    Points foo;
+
     private void transitionExitNotification(final Context mContext,final String message, final String message2){
         SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
