@@ -193,7 +193,7 @@ public class LocationService extends Service {
                     UpdateGeoLoc updateGeoLoc = new UpdateGeoLoc();
                     updateGeoLoc.execute();
                     //Log.e("Geofence Enter","Enter Checked");
-                    if (data.get(i).getStatus().equals("1") && !enterAlert) {
+                    if (/*data.get(i).getStatus().equals("1") && */ !enterAlert) {
                         enterNotification(LocationService.this, geoLoc.getName());
                         enterAlert = true;
                         exitAlert = false;
@@ -203,7 +203,7 @@ public class LocationService extends Service {
                     UpdateGeoLoc2 updateGeoLoc = new UpdateGeoLoc2();
                     updateGeoLoc.execute();
                     //Log.e("Geofence Exit","Exit Checked");
-                    if (data.get(i).getStatus().equals("1") && !exitAlert) {
+                    if (/*data.get(i).getStatus().equals("1") && */ !exitAlert) {
                         exitNotification(LocationService.this, geoLoc.getName());
                         exitAlert = true;
                         enterAlert = false;
