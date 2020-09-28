@@ -56,8 +56,6 @@ public interface WebService {
     @GET("/api/positions")
     Call<List<Position>> getPositions(@Query("deviceId") String deviceId, @Query("from") String lastTransitionStartTime, @Query("to") String lastTransitionEndTime);
 
-//    @POST("/api/devices")
-//    Call<Device> addDevice(@Header("Content-Type") String content_Type, @Body JsonObject requestBody);
 
   @POST("/api/devices")
     Call<Device> addDevice(@Header("Content-Type") String content_Type, @Body RequestBody requestBody);
