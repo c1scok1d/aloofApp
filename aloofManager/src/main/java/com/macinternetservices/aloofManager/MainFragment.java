@@ -591,7 +591,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                     map.moveCamera(center);
                     map.animateCamera(zoom);
                     //map.animateCamera(CameraUpdateFactory.);
-                    map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100));
+                    //map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100));
                     Toast.makeText(getContext(), "No longer tracking " + marker.getTitle(), Toast.LENGTH_SHORT).show();
                     marker.hideInfoWindow();
                     /*if(polyline != null) {
