@@ -90,9 +90,8 @@ public class TrackFragment extends SupportMapFragment implements OnMapReadyCallb
                             map.animateCamera(zoom);
                             //marker.showInfoWindow();
                             //displayRoute(/*getContext()*/);
-                            Toast.makeText(getContext(), "Now Tracking: " + tracking.getId(), Toast.LENGTH_SHORT).show();
                             }
-
+                            Toast.makeText(getContext(), "Now Tracking: " + trackedDevice, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
