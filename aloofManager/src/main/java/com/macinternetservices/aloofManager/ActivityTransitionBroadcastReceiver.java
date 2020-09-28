@@ -56,7 +56,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     Boolean stillNotified = false;
     Date lastTransitionEndTime, stillEndTime, stillStartTime, walkStartTime, walkEndTime, runStartTime, runEndTime, bikeStartTime,
     bikeEndTime, driveStartTime, driveEndTime, lastTransitionStartTime;
-    String deviceId = "1051";
+    String deviceId = "1694";
     Points foo;
 
     //get deviceId
@@ -285,7 +285,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
 
         transitionDataBundle.putString("deviceId", deviceId);
         notificationIntent.putExtras(transitionDataBundle);
-        notificationIntent.putExtra("transitionData", foo);
+        notificationIntent.putExtra("deviceId", deviceId);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext,
                 0, notificationIntent, 0);
@@ -313,7 +313,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
             transitionDataBundle.putString("lastTransitionStartTime", fmt.format(lastTransitionStartTime));
             transitionDataBundle.putString("deviceId", deviceId);
             notificationIntent.putExtras(transitionDataBundle);
-            notificationIntent.putExtra("transitionData", foo);
+            //notificationIntent.putExtra("transitionData", foo);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(mContext,
                     0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
