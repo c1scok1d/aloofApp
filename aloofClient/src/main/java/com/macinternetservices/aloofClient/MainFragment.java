@@ -77,9 +77,9 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        if (BuildConfig.HIDDEN_APP && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+        /* if (BuildConfig.HIDDEN_APP && Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
             removeLauncherIcon();
-        }
+        } */
 
         setHasOptionsMenu(true);
 
@@ -171,7 +171,7 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
         }
     }
 
-    private void removeLauncherIcon() {
+    /*private void removeLauncherIcon() {
         String className = MainActivity.class.getCanonicalName().replace(".MainActivity", ".Launcher");
         ComponentName componentName = new ComponentName(getActivity().getPackageName(), className);
         PackageManager packageManager = getActivity().getPackageManager();
@@ -185,7 +185,7 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
             builder.setPositiveButton(android.R.string.ok, null);
             builder.show();
         }
-    }
+    } */
 
     @Override
     public void onResume() {
