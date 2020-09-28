@@ -857,24 +857,23 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         Log.e("handleMessage","Message: "+message);
         Update update = objectMapper.readValue(message, Update.class);
         if (update != null && update.positions != null) {
-            //LatLngBounds.Builder builder = LatLngBounds.builder();
+            //LatLngBounds.Builder bounds = LatLngBounds.builder();
             // add map marker for each device
             for (Position position : update.positions) {
                 long deviceId = position.getDeviceId(); //deviceId
                 if (devices.containsKey(deviceId)) {
-                    LatLng location = new LatLng(position.getLatitude(), position.getLongitude()); // get device lat/lng
-                   // builder.include(location);
-                    latLngBoundsBuilder.include(location);
+                    //LatLng location = new LatLng(position.getLatitude(), position.getLongitude()); // get device lat/lng
+                    latLngBoundsBuilder.include(new LatLng(position.getLatitude(), position.getLongitude()));
                     Marker marker = markers.get(deviceId); // device marker
                     if (marker == null) { // if no marker exists
                         marker = map.addMarker(new MarkerOptions()
-                                .title(devices.get(deviceId).getName()).position(location)); //add marker at device lat/lng on map
+                                .title(devices.get(deviceId).getName()).position(new LatLng(position.getLatitude(), position.getLongitude()))); //add marker at device lat/lng on map
                         markers.put(deviceId, marker); // adds device to markers array
                     } else {
-                        marker.setPosition(location); // add device marker position
+                        marker.setPosition(new LatLng(position.getLatitude(), position.getLongitude())); // add device marker position
                     }
                     marker.setSnippet(formatDetails(position)); //set device details
-                    String foo = devices.get(deviceId).getName();
+                    //String foo = devices.get(deviceId).getName();
 
                    if(tracking && devices.get(deviceId).getName().equals(trackedDevice)) { // if tracking do not update view
                         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude));
@@ -883,13 +882,13 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                         map.animateCamera(zoom);
                         marker.showInfoWindow();
                         //break;
-                    } else if (firstRun){
+                    } else /* if (firstRun)*/ {
                         LatLngBounds bounds = latLngBoundsBuilder.build();
                         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude));
                         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
                         map.moveCamera(center);
                         map.animateCamera(zoom);
-                        map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds,100));
+                        //map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds,100));
                     }
                     marker.setIcon(BitmapDescriptorFactory.defaultMarker(new Random().nextInt(360))); // make each marker a random color
                     positions.put(deviceId, position); // add to positions array
