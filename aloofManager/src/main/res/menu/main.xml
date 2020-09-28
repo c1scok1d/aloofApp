@@ -12,20 +12,18 @@
         android:title="Preferences"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_client"
-        android:title="Client Settings"
+        android:id="@+id/action_devices"
+        android:title="@string/devices_title"
         app:showAsAction="never" />
-
     <item
         android:id="@+id/action_add"
         android:title="Add Device"
         app:showAsAction="never" />
-
-
     <item
-        android:id="@+id/action_devices"
-        android:title="@string/devices_title"
-        app:showAsAction="ifRoom" />
+        android:id="@+id/action_client"
+        android:title="Client Settings"
+        app:showAsAction="never" />
+
 
     <group>
         <item
