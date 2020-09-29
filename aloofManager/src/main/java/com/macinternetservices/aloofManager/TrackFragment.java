@@ -36,7 +36,6 @@ public class TrackFragment extends SupportMapFragment implements OnMapReadyCallb
 
         Bundle transitionDataBundle = this.getArguments();
         if(transitionDataBundle != null) {
-
             deviceId = getArguments().getString("deviceId");
             //String lastTransitionEndTime = getArguments().getString("lastTransitionEndTime");
             //String lastTransitionStartTime = getArguments().getString("lastTransitionStartTime");
@@ -82,7 +81,7 @@ public class TrackFragment extends SupportMapFragment implements OnMapReadyCallb
                         if(response.body() != null){
                         for (Tracking tracking : response.body()) {
                             //tracking = true;
-                            trackedDevice = tracking.getDeviceId().toString();
+                            //trackedDevice = tracking.getDevic().toString();
                             CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(tracking.getLatitude(), tracking.getLongitude()));
                             CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
                             //marker.showInfoWindow();

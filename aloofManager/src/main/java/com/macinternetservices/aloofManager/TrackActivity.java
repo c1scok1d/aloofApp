@@ -38,15 +38,27 @@ public class TrackActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         fragmentManager = getSupportFragmentManager();//Get Fragment Manager
 
-        Points points = getIntent().getParcelableExtra("transitionData");
+        //Points points = getIntent().getParcelableExtra("transitionData");
+        //String fooBar = points.getDeviceId();
+
+        TrackFragment foo = new TrackFragment();
+        Bundle transitionDataBundle = getIntent().getExtras();
+        //transitionDataBundle.putString("lastTransitionEndTime", points.getlastTransitionEndTime());
+        //transitionDataBundle.putString("lastTransitionStartTime", points.getlastTransitionEndTime());
+        //transitionDataBundle.putString("deviceId", points.getDeviceId());
+
+        foo.setArguments(transitionDataBundle);
+
+        /* Points points = getIntent().getParcelableExtra("transitionData");
+        String deviceId = getIntent().getDataString();
 
         TrackFragment foo = new TrackFragment();
         Bundle transitionDataBundle = new Bundle();
         //transitionDataBundle.putString("lastTransitionEndTime", points.getlastTransitionEndTime());
         //transitionDataBundle.putString("lastTransitionStartTime", points.getlastTransitionEndTime());
-        transitionDataBundle.putString("deviceId", points.getDeviceId());
+        transitionDataBundle.putString("deviceId", getIntent().getDataString());
 
-        foo.setArguments(transitionDataBundle);
+        foo.setArguments(transitionDataBundle); */
 
         if (savedInstanceState == null) {
             getSupportFragmentManager()

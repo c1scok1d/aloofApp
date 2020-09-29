@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "applicationId": "com.macinternetservices.aloofClient",
+  "variantType": "LIBRARY",
+  "elements": [
+    {
+      "outputType": {
+        "type": "MERGED_MANIFESTS"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 1,
+        "versionName": "0.0",
+        "outputFile": "aloofClient-regular-debug.aar",
+        "fullName": "regularDebug",
+        "baseName": "regular-debug",
+        "dirName": ""
+      },
+      "path": "../../library_manifest/regularDebug/AndroidManifest.xml",
+      "properties": {
+        "packageId": "com.macinternetservices.aloofClient",
+        "split": ""
+      }
+    }
+  ]
+}

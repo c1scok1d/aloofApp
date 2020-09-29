@@ -37,6 +37,7 @@ import java.util.Locale;
 import java.util.Random;
 
 import static com.macinternetservices.aloofManager.MainFragment.trackedDevice;
+import static com.macinternetservices.aloofManager.MainFragment.tracking;
 
 public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
 
@@ -57,7 +58,6 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     Date lastTransitionEndTime, stillEndTime, stillStartTime, walkStartTime, walkEndTime, runStartTime, runEndTime, bikeStartTime,
     bikeEndTime, driveStartTime, driveEndTime, lastTransitionStartTime;
     String deviceId = "1694";
-    Points foo;
 
     //get deviceId
     //String deviceId = whatever.getDeviceId
@@ -125,7 +125,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
 
                                 } else if (event.getActivityType() == DetectedActivity.STILL && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT) {
                                     stillEndTime = Calendar.getInstance().getTime();
-                                    lastTransitionEndTime = stillEndTime;
+                                    //lastTransitionEndTime = stillEndTime;
                                     //Double min = (Double) Collections.min(walkSpeed);
                                     //Double max = (Double) Collections.max(walkSpeed);
                                     /*
@@ -277,15 +277,13 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     }
 
     private void transitionStartNotification(final Context mContext,final String message, String deviceId){
-
+        SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
         createNotificationChannel(mContext);
-        Intent notificationIntent = new Intent(mContext, TrackActivity.class);
 
-        Bundle transitionDataBundle = new Bundle();
-
-        transitionDataBundle.putString("deviceId", deviceId);
-        notificationIntent.putExtras(transitionDataBundle);
-        notificationIntent.putExtra("deviceId", deviceId);
+        tracking = true;
+        trackedDevice = deviceId;
+        Intent notificationIntent = new Intent(mContext, MainActivity.class);
+        //notificationIntent.putExtra("deviceId", deviceId);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext,
                 0, notificationIntent, 0);
@@ -307,19 +305,19 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
         createNotificationChannel(mContext);
         if(lastTransitionEndTime != null && lastTransitionStartTime != null) {
             Intent notificationIntent = new Intent(mContext, RouteActivity.class); //start route activity put start/end time as intent extras
-            foo = new Points(fmt.format(lastTransitionEndTime),fmt.format(lastTransitionStartTime), deviceId);
+            Points foo = new Points(fmt.format(lastTransitionEndTime),fmt.format(lastTransitionStartTime), deviceId);
             Bundle transitionDataBundle = new Bundle();
             transitionDataBundle.putString("lastTransitionEndTime", fmt.format(lastTransitionEndTime));
             transitionDataBundle.putString("lastTransitionStartTime", fmt.format(lastTransitionStartTime));
             transitionDataBundle.putString("deviceId", deviceId);
             notificationIntent.putExtras(transitionDataBundle);
-            //notificationIntent.putExtra("transitionData", foo);
+            notificationIntent.putExtra("transitionData", foo);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(mContext,
                     0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             Notification notification = new NotificationCompat.Builder(mContext, CHANNEL_ID)
                     .setContentTitle(message)
-                    .setContentText("Tap for route")
+                    .setContentText(message2+"\nTap for route")
                     .setSmallIcon(R.mipmap.ic_logo)
                     .setContentIntent(pendingIntent)
                     .build();

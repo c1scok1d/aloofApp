@@ -1,0 +1,794 @@
+[
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_logo_wht_back_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_logo_wht_back_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_alert_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/alert_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_alert_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/alert_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_logo_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_logo_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_logo_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_logo_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_activity_login.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_activity_send_command.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/activity_send_command.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_online_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/online_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_logo_wht_back.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_logo_wht_back.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_offline_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/offline_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_offline_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/offline_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_logo_wht_back_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_logo_wht_back_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_fragment_send_command.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/fragment_send_command.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_placeholder_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/placeholder_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_alert_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/alert_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_online_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/online_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_edit_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_edit_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_delete.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_delete.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_logo.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_logo.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_edit.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_edit.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_online.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/online.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_online_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/online_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_delete_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_delete_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_alert.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/alert.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_online_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/online_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_offline.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/offline.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_delete_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_delete_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_placeholder_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/placeholder_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_delete_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_delete_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_online_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/online_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_logo_wht_back.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_logo_wht_back.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/drawable-xxhdpi_ic_settings.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/drawable-xxhdpi/ic_settings.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_edit.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_edit.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_alert_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/alert_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_edit_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_edit_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_view_info.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/view_info.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_logo.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_placeholder.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/placeholder.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_alert_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/alert_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_offline.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/offline.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_placeholder_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/placeholder_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_activity_permission_rational.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/activity_permission_rational.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_logo_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_logo_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_online.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/online.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/drawable-xhdpi_ic_settings.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/drawable-xhdpi/ic_settings.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_geofence.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_geofence.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_delete.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_delete.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_online_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/online_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_alert_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/alert_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_alert_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/alert_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_placeholder_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/placeholder_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_delete.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_delete.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_fragment_del_device.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/fragment_del_device.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_offline.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/offline.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_geofence_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_geofence_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_logo_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_logo_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_fragment_devices.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/fragment_devices.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_fragment_login.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/fragment_login.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_logo_wht_back.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_logo_wht_back.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_delete_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_delete_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_edit_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_edit_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_edit_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_edit_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_geofence_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_geofence_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_alert_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/alert_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_geofence.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_geofence.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_logo_wht_back.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_logo_wht_back.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_online.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/online.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_fragment_edt_device.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/fragment_edt_device.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_offline_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/offline_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_alert_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/alert_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_geofence_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_geofence_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_logo_wht_back_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_logo_wht_back_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_logo_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_logo_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_alert.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/alert.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_offline.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/offline.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_edit_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_edit_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_delete.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_delete.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_logo_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_logo_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_geofence.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_geofence.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_alert_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/alert_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_edit_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_edit_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_edit.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_edit.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_online_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/online_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_geofence_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_geofence_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_placeholder_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/placeholder_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_logo_wht_back.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_logo_wht_back.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_offline_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/offline_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_fragment_geofences.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/fragment_geofences.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_logo_wht_back_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_logo_wht_back_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/drawable_route_button.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/drawable/route_button.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_geofence_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_geofence_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_placeholder.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/placeholder.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_edit.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_edit.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/drawable-mdpi_ic_settings.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/drawable-mdpi/ic_settings.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_geofence_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_geofence_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_logo_wht_back_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_logo_wht_back_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_delete_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_delete_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_online_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/online_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_fragment_add_geofence.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/fragment_add_geofence.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_placeholder_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/placeholder_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_offline_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/offline_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_edit_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_edit_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_online.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/online.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_delete_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_delete_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_offline_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/offline_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_edit_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_edit_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_offline_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/offline_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_logo_wht_back_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_logo_wht_back_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/anim_up_from_bottom.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/anim/up_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_logo.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_logo.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_fragment_add_device.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/fragment_add_device.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_logo.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_delete_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_delete_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_alert.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/alert.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_online_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/online_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_placeholder.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/placeholder.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/drawable_ic_battery_alert_black_24dp.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/drawable/ic_battery_alert_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_logo_wht_back_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_logo_wht_back_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_logo_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_logo_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_placeholder.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/placeholder.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_logo_wht_back_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_logo_wht_back_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_edit_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_edit_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_placeholder.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/placeholder.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_placeholder_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/placeholder_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_alert.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/alert.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_placeholder.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/placeholder.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_placeholder_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/placeholder_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_online.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/online.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_alert_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/alert_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_delete_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_delete_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_edit_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_edit_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_online_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/online_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_logo.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_geofence_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_geofence_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_logo_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_logo_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/anim_down_from_top.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/anim/down_from_top.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_logo_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_logo_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_alert.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/alert.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_alert.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/alert.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_edit.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_edit.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_geofence_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_geofence_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_delete_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_delete_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_online.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/online.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_logo_wht_back_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_logo_wht_back_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_offline_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/offline_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_row_item.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/row_item.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_placeholder_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/placeholder_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_geofence.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_geofence.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/menu_main.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/menu/main.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_offline_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/offline_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_geofence.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_geofence.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_edit_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_edit_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_geofence_row_item.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/geofence_row_item.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_logo_wht_back_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_logo_wht_back_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_ic_delete.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/ic_delete.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_geofence_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_geofence_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_geofence_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_geofence_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_logo_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_logo_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_placeholder_round.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/placeholder_round.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_delete_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_delete_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_activity_layout.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/activity_layout.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_delete.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_delete.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_logo_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_logo_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_ic_edit.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/ic_edit.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_placeholder_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/placeholder_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_offline.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/offline.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_offline.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/offline.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_ic_logo_wht_back_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/ic_logo_wht_back_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/drawable_ic_priority_high_black_24dp.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/drawable/ic_priority_high_black_24dp.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-anydpi-v26_ic_logo_wht_back.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-anydpi-v26/ic_logo_wht_back.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/drawable_recycler.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/drawable/recycler.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_geofence.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_geofence.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-mdpi_online_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-mdpi/online_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_geofence_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_geofence_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/layout_view_settings.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/layout/view_settings.xml"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxhdpi_ic_delete_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxhdpi/ic_delete_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xhdpi_offline_round.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xhdpi/offline_round.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/drawable-hdpi_ic_settings.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/drawable-hdpi/ic_settings.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-xxxhdpi_offline_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-xxxhdpi/offline_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/build/intermediates/res/merged/regular/debug/menu_popup.xml.flat",
+        "source": "/Users/c1scok1d/StudioProjects/aloof/aloofManager/src/main/res/menu/popup.xml"
+    }
+]

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "applicationId": "com.macinternetservices.aloofManager",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "METADATA_FEATURE_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 1,
+        "versionName": "0.0",
+        "outputFile": "aloofManager-regular-debug.apk",
+        "fullName": "regularDebug",
+        "baseName": "regular-debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {}
+    }
+  ]
+}
