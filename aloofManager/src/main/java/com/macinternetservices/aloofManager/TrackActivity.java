@@ -38,8 +38,8 @@ public class TrackActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         fragmentManager = getSupportFragmentManager();//Get Fragment Manager
 
-        //Points points = getIntent().getParcelableExtra("transitionData");
-        //String fooBar = points.getDeviceId();
+        Points points = getIntent().getParcelableExtra("transitionData");
+        String fooBar = points.getDeviceId();
 
         TrackFragment foo = new TrackFragment();
         Bundle transitionDataBundle = getIntent().getExtras();
