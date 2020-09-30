@@ -55,8 +55,8 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     public static ArrayList bikeSpeed = new ArrayList();
     public static ArrayList driveSpeed = new ArrayList<>();
     Boolean stillNotified = false;
-    Date lastTransitionEndTime, stillEndTime, stillStartTime, walkStartTime, walkEndTime, runStartTime, runEndTime, bikeStartTime,
-    bikeEndTime, driveStartTime, driveEndTime, lastTransitionStartTime;
+    public static Date stillStartTime, walkStartTime, walkEndTime, runStartTime, runEndTime, bikeStartTime,
+    bikeEndTime, driveStartTime, driveEndTime;
     String deviceId = "1694";
 
     //get deviceId
@@ -68,7 +68,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     @SuppressLint("MissingPermission")
     @Override
     public void onReceive(Context context, Intent intent) {
-        Log.e("Transition","Transition Received");
+        Log.e("ActivityTransition","Transition Received");
         if (intent != null && INTENT_ACTION.equals(intent.getAction())) {
             if (ActivityTransitionResult.hasResult(intent)) {
                 ActivityTransitionResult intentResult = ActivityTransitionResult
@@ -76,69 +76,9 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                 // handle activity transition result ...
                 for (ActivityTransitionEvent event : intentResult.getTransitionEvents()) {
                     // chronological sequence of events....
-                    if (event.getActivityType() == DetectedActivity.STILL && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_ENTER) {
-                        locManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
-                        locListener = new LocationListener() {
-                            @Override
-                            public void onStatusChanged(String provider, int status,
-                                                        Bundle extras) {
-                            }
-
-                            @Override
-                            public void onProviderEnabled(String provider) {
-                            }
-
-                            @Override
-                            public void onProviderDisabled(String provider) {
-                            }
-
-                            @Override
-                            public void onLocationChanged(Location location) {
-                                Geocoder geocoder;
-                                List<Address> addresses;
-                                geocoder = new Geocoder(context, Locale.getDefault());
-                                try {
-                                    addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
-                                    //address[0] = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
-                                    bldgno[0] = addresses.get(0).getSubThoroughfare(); // building number
-                                    street[0] = addresses.get(0).getThoroughfare(); //street name
-                                    ///city[0] = addresses.get(0).getLocality();
-                                    //state[0] = addresses.get(0).getAdminArea();
-                                    //country[0] = addresses.get(0).getCountryName();
-                                    //postalCode[0] = addresses.get(0).getPostalCode();
-                                    knownName[0] = addresses.get(0).getFeatureName(); // Only if available else return NULL
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
-                                if (!stillNotified) {
-                                    if(!bldgno[0].equals(knownName[0])) {
-                                        stillStartTime = Calendar.getInstance().getTime();
-                                        //lastTransitionStartTime = stillStartTime;
-                                        transitionStillNotification(context, trackedDevice + " is at "+bldgno[0]+" "+street[0]+" ("+knownName[0]+")");
-                                        stillNotified = true;
-                                    } else {
-                                        stillStartTime = Calendar.getInstance().getTime();
-                                        //lastTransitionStartTime = stillStartTime;
-                                        transitionStillNotification(context, trackedDevice + " is at " + bldgno[0] + " " + street[0]);
-                                        stillNotified = true;
-                                    }
-
-                                } else if (event.getActivityType() == DetectedActivity.STILL && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT) {
-                                    stillEndTime = Calendar.getInstance().getTime();
-                                    //lastTransitionEndTime = stillEndTime;
-                                    //Double min = (Double) Collections.min(walkSpeed);
-                                    //Double max = (Double) Collections.max(walkSpeed);
-                                    /*
-                                    add walkStartTime, walkEndTime and walkPoints array to rooms db named transitions
-                                    only store data for last 5 transitions in db
-                                     */
-                                }
-                            }
-                        };
-                        locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
-                    } else if (event.getActivityType() == DetectedActivity.WALKING && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_ENTER){
+                    if (event.getActivityType() == DetectedActivity.WALKING && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_ENTER){
                         walkStartTime = Calendar.getInstance().getTime();
-                        lastTransitionStartTime = walkStartTime;
+                        //Date lastTransitionStartTime = walkStartTime;
                         transitionStartNotification(context,trackedDevice+" is walking", deviceId);
 
                         locManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
@@ -166,22 +106,22 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         stillNotified = false;
                     } else if (event.getActivityType() == DetectedActivity.WALKING && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT){
                         walkEndTime = Calendar.getInstance().getTime();
-                        lastTransitionEndTime = walkEndTime;
+                        //Date lastTransitionEndTime = walkEndTime;
                         //Double min = (Double) Collections.min(walkSpeed);
                         Double max = (Double) Collections.max(walkSpeed);
                         /*
                         add walkStartTime, walkEndTime and walkPoints array to rooms db named transitions
                         only store data for last 5 transitions in db
                          */
-                        if(lastTransitionEndTime != null && lastTransitionStartTime != null) {
-                            transitionExitNotification(context, trackedDevice + " stopped walking!", " Max Speed: " + String.format("%.0f", max) + "MPH");
+                        if(walkStartTime != null && walkEndTime != null) {
+                            transitionExitNotification(context, trackedDevice + " stopped walking!", " Max Speed: " + String.format("%.0f", max) + "MPH", walkStartTime, walkEndTime);
                         } else {
                             //do stuff
                         }
                     } else if (event.getActivityType() == DetectedActivity.RUNNING && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_ENTER){
                         locManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
                         runStartTime = Calendar.getInstance().getTime();
-                        lastTransitionStartTime = runStartTime;
+                        Date lastTransitionStartTime = runStartTime;
                         transitionStartNotification(context,trackedDevice+" is running", deviceId);
                         stillNotified = false;
 
@@ -207,17 +147,17 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
                     } else if (event.getActivityType() == DetectedActivity.RUNNING && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT){
                         runEndTime = Calendar.getInstance().getTime();
-                        lastTransitionEndTime = runEndTime;
+                        //lastTransitionEndTime = runEndTime;
                         //Double min = (Double) Collections.min(runSpeed);
                         Double max = (Double) Collections.max(runSpeed);
-                        if(lastTransitionEndTime != null && lastTransitionStartTime != null) {
-                            transitionExitNotification(context, trackedDevice + " stopped running!", "Max Speed: " + String.format("%.0f", max));
+                        if(runStartTime != null && runEndTime != null) {
+                            transitionExitNotification(context, trackedDevice + " stopped running!", "Max Speed: " + String.format("%.0f", max), runStartTime, runEndTime);
                         } else {
                             //do stuff
                         }
                     } else if (event.getActivityType() == DetectedActivity.IN_VEHICLE && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_ENTER){
                         driveStartTime = Calendar.getInstance().getTime();
-                        lastTransitionStartTime = driveStartTime;
+                        //lastTransitionStartTime = driveStartTime;
                         transitionStartNotification(context,trackedDevice+" is driving", deviceId);
                         stillNotified = false;
 
@@ -245,17 +185,17 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
                     } else if (event.getActivityType() == DetectedActivity.IN_VEHICLE && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT){
                         driveEndTime = Calendar.getInstance().getTime();
-                        lastTransitionEndTime = driveEndTime;
+                        //lastTransitionEndTime = driveEndTime;
                         //Double min = (Double) Collections.min(driveSpeed);
                         Double max = (Double) Collections.max(driveSpeed);
-                        if(lastTransitionEndTime != null && lastTransitionStartTime != null) {
-                            transitionExitNotification(context, trackedDevice + " stopped driving!", "Max Speed: " + String.format("%.0f", max));
+                        if(driveStartTime != null && driveEndTime != null) {
+                            transitionExitNotification(context, trackedDevice + " stopped driving!", "Max Speed: " + String.format("%.0f", max), driveStartTime, driveEndTime);
                         } else {
                             //do stuff
                         }
                     } else if (event.getActivityType() == DetectedActivity.ON_BICYCLE && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_ENTER){
                         bikeStartTime = Calendar.getInstance().getTime();
-                        lastTransitionStartTime = bikeStartTime;
+                        //lastTransitionStartTime = bikeStartTime;
                         transitionStartNotification(context,trackedDevice+" is biking", deviceId);
                         stillNotified = false;
 
@@ -282,14 +222,59 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
                     } else if (event.getActivityType() == DetectedActivity.ON_BICYCLE && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT){
                         bikeEndTime = Calendar.getInstance().getTime();
-                        lastTransitionEndTime = bikeEndTime;
+                        //lastTransitionEndTime = bikeEndTime;
                         //Double min = (Double) Collections.min(bikeSpeed);
                         Double max = (Double) Collections.max(bikeSpeed);
-                        if(lastTransitionEndTime != null && lastTransitionStartTime != null) {
-                            transitionExitNotification(context, trackedDevice + " stopped biking", "Max Speed: " + String.format("%.0f", max));
+                        if(bikeStartTime != null && bikeEndTime != null) {
+                            transitionExitNotification(context, trackedDevice + " stopped biking", "Max Speed: " + String.format("%.0f", max), bikeStartTime, bikeEndTime);
                         } else {
                             //do stuff
                         }
+                    } else if (event.getActivityType() == DetectedActivity.STILL && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_ENTER) {
+                        locManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+                        locListener = new LocationListener() {
+                                @Override public void onStatusChanged(String provider, int status,
+                                                            Bundle extras) {
+                                }
+
+                                @Override
+                                public void onProviderEnabled(String provider) {
+                                }
+
+                                @Override
+                                public void onProviderDisabled(String provider) {
+                                }
+
+                                @Override
+                                public void onLocationChanged(Location location) {
+                                    Geocoder geocoder;
+                                    List<Address> addresses;
+                                    geocoder = new Geocoder(context, Locale.getDefault());
+                                    try {
+                                        addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+                                        bldgno[0] = addresses.get(0).getSubThoroughfare(); // building number
+                                        street[0] = addresses.get(0).getThoroughfare(); //street name
+                                        knownName[0] = addresses.get(0).getFeatureName(); // Only if available else return NULL
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
+                                    if (!stillNotified) {
+                                        if(!bldgno[0].equals(knownName[0])) {
+                                            stillStartTime = Calendar.getInstance().getTime();
+                                            transitionStillNotification(context, trackedDevice + " is at "+bldgno[0]+" "+street[0]+" ("+knownName[0]+")");
+                                            stillNotified = true;
+                                        } else {
+                                            stillStartTime = Calendar.getInstance().getTime();
+                                            transitionStillNotification(context, trackedDevice + " is at " + bldgno[0] + " " + street[0]);
+                                            stillNotified = true;
+                                        }
+
+                                    } else if (event.getActivityType() == DetectedActivity.STILL && event.getTransitionType() == ActivityTransition.ACTIVITY_TRANSITION_EXIT) {
+                                        // do stuff
+                                    }
+                                }
+                            };
+                            locManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 1, locListener);
                     }
                 }
             }
@@ -297,13 +282,11 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     }
 
     private void transitionStartNotification(final Context mContext,final String message, String deviceId){
-        SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
         createNotificationChannel(mContext);
 
         tracking = true;
         trackedDevice = deviceId;
         Intent notificationIntent = new Intent(mContext, MainActivity.class);
-        //notificationIntent.putExtra("deviceId", deviceId);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(mContext,
                 0, notificationIntent, 0);
@@ -319,11 +302,17 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     }
 //figure out how to get deviceId
 
-    private void transitionExitNotification(final Context mContext,final String message, final String message2){
-        SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+    private void transitionExitNotification(final Context mContext,final String message, final String message2, Date lastTransitionStartTime, Date lastTransitionEndTime){
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
         createNotificationChannel(mContext);
-        //if(lastTransitionEndTime != null && lastTransitionStartTime != null) {
+
+        long different = lastTransitionStartTime.getTime() - lastTransitionEndTime.getTime();
+        long secondsInMilli = 1000;
+        long minutesInMilli = secondsInMilli * 60;
+        long elapsedMinutes = different / minutesInMilli;
+
+        if(elapsedMinutes >= 3){
             Intent notificationIntent = new Intent(mContext, RouteActivity.class); //start route activity put start/end time as intent extras
             Points foo = new Points(fmt.format(lastTransitionEndTime),fmt.format(lastTransitionStartTime), deviceId);
             Bundle transitionDataBundle = new Bundle();
@@ -344,12 +333,20 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
             NotificationManager notifManager =
                     (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
             notifManager.notify(new Random().nextInt(), notification);
-        //}
+        } else {
+            Notification notification = new NotificationCompat.Builder(mContext, CHANNEL_ID)
+                    .setContentTitle(message)
+                    .setContentText(message2)
+                    .setSmallIcon(R.mipmap.ic_logo)
+                    .build();
+            NotificationManager notifManager =
+                    (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
+            notifManager.notify(new Random().nextInt(), notification);
+        }
     }
 
     private void transitionStillNotification(final Context mContext,final String message){
         createNotificationChannel(mContext);
-        //if(lastTransitionEndTime == null && lastTransitionStartTime == null) {
             Notification notification = new NotificationCompat.Builder(mContext, CHANNEL_ID)
                     .setContentTitle(message)
                     .setContentText("Swipe to close")
@@ -358,7 +355,6 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
             NotificationManager notifManager =
                     (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
             notifManager.notify(new Random().nextInt(), notification);
-        //}
     }
 
     public static final String CHANNEL_ID = "Transition Channel";
