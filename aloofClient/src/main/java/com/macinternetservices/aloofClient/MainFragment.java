@@ -16,6 +16,7 @@
 package com.macinternetservices.aloofClient;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.ComponentName;
@@ -28,6 +29,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.telephony.TelephonyManager;
 import android.text.InputType;
 import android.util.Log;
 import android.view.Menu;
@@ -240,9 +242,8 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
     private void initPreferences() {
         PreferenceManager.setDefaultValues(getActivity(), R.xml.preferences, false);
 
-        //device unique id
-        String unique_id;
-        unique_id = Settings.Secure.getString(getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+        TelephonyManager tMgr = (TelephonyManager)getContext().getSystemService(Context.TELEPHONY_SERVICE);
+        @SuppressLint("MissingPermission") String mPhoneNumber = tMgr.getLine1Number();
 
         if (!sharedPreferences.contains(KEY_DEVICE)) {
             String id = String.valueOf(new Random().nextInt(900000) + 100000);
