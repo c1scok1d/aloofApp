@@ -135,7 +135,7 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
         alarmManager = (AlarmManager) getActivity().getSystemService(Context.ALARM_SERVICE);
         alarmIntent = PendingIntent.getBroadcast(getActivity(), 0, new Intent(getActivity(), AutostartReceiver.class), 0);
 
-        if (sharedPreferences.getBoolean(KEY_STATUS, false)) {
+        if (sharedPreferences.getBoolean(KEY_STATUS, true)) {
             startTrackingService(true, false);
         }
 
@@ -249,7 +249,7 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
             sharedPreferences.edit().putString(KEY_DEVICE, id).apply();
             ((EditTextPreference) findPreference(KEY_DEVICE)).setText(id);
         }
-        findPreference(KEY_DEVICE).setSummary(sharedPreferences.getString(KEY_DEVICE, null));
+//        findPreference(KEY_DEVICE).setSummary(sharedPreferences.getString(KEY_DEVICE, null));
     }
 
     private void startTrackingService(boolean checkPermission, boolean permission) {
