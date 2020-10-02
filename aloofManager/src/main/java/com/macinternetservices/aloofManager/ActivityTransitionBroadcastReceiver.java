@@ -151,7 +151,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         //Double min = (Double) Collections.min(runSpeed);
                         Double max = (Double) Collections.max(runSpeed);
                         if(runStartTime != null && runEndTime != null) {
-                            transitionExitNotification(context, trackedDevice + " stopped running!", "Max Speed: " + String.format("%.0f", max), runStartTime, runEndTime);
+                            transitionExitNotification(context, trackedDevice + " stopped running!", " Max Speed: " + String.format("%.0f", max) + "MPH", runStartTime, runEndTime);
                         } else {
                             //do stuff
                         }
@@ -189,7 +189,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         //Double min = (Double) Collections.min(driveSpeed);
                         Double max = (Double) Collections.max(driveSpeed);
                         if(driveStartTime != null && driveEndTime != null) {
-                            transitionExitNotification(context, trackedDevice + " stopped driving!", "Max Speed: " + String.format("%.0f", max), driveStartTime, driveEndTime);
+                            transitionExitNotification(context, trackedDevice + " stopped driving!", " Max Speed: " + String.format("%.0f", max) + "MPH", driveStartTime, driveEndTime);
                         } else {
                             //do stuff
                         }
@@ -226,7 +226,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                         //Double min = (Double) Collections.min(bikeSpeed);
                         Double max = (Double) Collections.max(bikeSpeed);
                         if(bikeStartTime != null && bikeEndTime != null) {
-                            transitionExitNotification(context, trackedDevice + " stopped biking", "Max Speed: " + String.format("%.0f", max), bikeStartTime, bikeEndTime);
+                            transitionExitNotification(context, trackedDevice + " stopped biking", " Max Speed: " + String.format("%.0f", max) + "MPH", bikeStartTime, bikeEndTime);
                         } else {
                             //do stuff
                         }
