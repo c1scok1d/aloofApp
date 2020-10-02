@@ -854,7 +854,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     public static ArrayList<DataModel> allDevicesArray = new ArrayList<>();
     //handle device api data
     private void handleMessage(String message) throws IOException {
-        Log.e("handleMessage","Message: "+message);
+        Log.e("MainFragment","Message: "+message);
         Update update = objectMapper.readValue(message, Update.class);
         if (update != null && update.positions != null) {
             //LatLngBounds.Builder bounds = LatLngBounds.builder();
@@ -875,7 +875,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                     marker.setSnippet(formatDetails(position)); //set device details
                     //String foo = devices.get(deviceId).getName();
 
-                   if(tracking && devices.get(deviceId).getName().equals(trackedDevice)) { // if tracking do not update view
+                   if(tracking && devices.get(deviceId).equals(trackedDevice)) { // if tracking do not update view
                         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude));
                         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
                         map.moveCamera(center);
