@@ -101,7 +101,7 @@ public class RouteFragment extends SupportMapFragment implements OnMapReadyCallb
         different = different % minutesInMilli;
 
         long elapsedSeconds = different / secondsInMilli; */
-        LatLngBounds.Builder latLngBoundsBuilder = new LatLngBounds.Builder();
+        LatLngBounds.Builder latLngBounds = new LatLngBounds.Builder();
 
         dataModels= new ArrayList<>();
         final MainApplication application = (MainApplication) getActivity().getApplication();
@@ -110,14 +110,14 @@ public class RouteFragment extends SupportMapFragment implements OnMapReadyCallb
             @Override
             public void onServiceReady(OkHttpClient client, Retrofit retrofit, WebService service) {
                 //service.getPositions(deviceId, lastTransitionEndTime, lastTransitionEndTime).enqueue(new WebServiceCallback<List<Position>>(getContext()) {
-                service.getPositions(getArguments().getString("deviceId"), getArguments().getString("lastTransitionEndTime"), getArguments().getString("lastTransitionStartTime")).enqueue(new WebServiceCallback<List<Position>>(getContext()) {
+                service.getPositions(getArguments().getString("deviceId"), getArguments().getString("lastTransitionStartTime"), getArguments().getString("lastTransitionEndTime")).enqueue(new WebServiceCallback<List<Position>>(getContext()) {
 
                     @Override
                     public void onSuccess(Response<List<Position>> response) {
                         Log.e("GetRoutes", "Response: " +response.body());
                         for (Position position : response.body()) {
                             if (position != null) {
-                                latLngBoundsBuilder.include(new LatLng(position.getLatitude(), position.getLongitude()));
+                                latLngBounds.include(new LatLng(position.getLatitude(), position.getLongitude()));
                                 polyline = map.addPolyline(polylineOptions.clickable(true).add(new LatLng(position.getLatitude(), position.getLongitude())));
                                 //LatLng foo = new LatLng(position.getLatitude(), position.getLongitude());
                                 polylineOptions.add(new LatLng(position.getLatitude(), position.getLongitude()));
@@ -125,8 +125,9 @@ public class RouteFragment extends SupportMapFragment implements OnMapReadyCallb
                                 Toast.makeText(getContext(), "No points to display", Toast.LENGTH_LONG).show();
                             }
                         }
-                        map.animateCamera(CameraUpdateFactory.zoomTo(16));
-                        map.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBoundsBuilder.build(), 100));
+                        LatLngBounds bounds = latLngBounds.build();
+                            map.animateCamera(CameraUpdateFactory.zoomTo(16));
+                            map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 100));
                     }
                 });
 
