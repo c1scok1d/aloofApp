@@ -56,7 +56,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
     public static ArrayList driveSpeed = new ArrayList<>();
     Boolean stillNotified = false;
     public static Date stillStartTime, walkStartTime, walkEndTime, runStartTime, runEndTime, bikeStartTime,
-    bikeEndTime, driveStartTime, driveEndTime;
+    bikeEndTime, driveStartTime, driveEndTime, lastTransitionStartTime, lastTransitionEndTime;;
     String deviceId = "1694";
 
     //get deviceId
@@ -304,8 +304,9 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
 
     private void transitionExitNotification(final Context mContext,final String message, final String message2, Date lastTransitionStartTime, Date lastTransitionEndTime){
         @SuppressLint("SimpleDateFormat") SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
-
         createNotificationChannel(mContext);
+        //lastTransitionStartTime = this.lastTransitionStartTime;
+        //lastTransitionEndTime = this.lastTransitionEndTime;
 
         long different = lastTransitionEndTime.getTime() - lastTransitionStartTime.getTime();
         long secondsInMilli = 1000;
@@ -316,8 +317,8 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
             Intent notificationIntent = new Intent(mContext, RouteActivity.class); //start route activity put start/end time as intent extras
             Points foo = new Points(fmt.format(lastTransitionEndTime),fmt.format(lastTransitionStartTime), deviceId);
             Bundle transitionDataBundle = new Bundle();
-            transitionDataBundle.putString("lastTransitionEndTime", fmt.format(lastTransitionEndTime));
-            transitionDataBundle.putString("lastTransitionStartTime", fmt.format(lastTransitionStartTime));
+            transitionDataBundle.putString("lastTransitionEndTime", lastTransitionEndTime.toString());
+            transitionDataBundle.putString("lastTransitionStartTime", lastTransitionStartTime.toString());
             transitionDataBundle.putString("deviceId", deviceId);
             notificationIntent.putExtras(transitionDataBundle);
             notificationIntent.putExtra("transitionData", foo);
