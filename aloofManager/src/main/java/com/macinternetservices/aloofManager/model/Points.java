@@ -22,7 +22,7 @@ public class Points implements Parcelable {
 
     protected Points(Parcel in) {
         lastTransitionEndTime = in.readString();
-        lastTransitionEndTime = in.readString();
+        lastTransitionStartTime = in.readString();
         deviceId = in.readString();
         points = in.createTypedArrayList(Points.CREATOR);
     }
