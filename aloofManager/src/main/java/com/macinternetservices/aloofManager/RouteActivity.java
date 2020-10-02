@@ -40,6 +40,7 @@ public class RouteActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();//Get Fragment Manager
 
         Points points = getIntent().getParcelableExtra("transitionData");
+        Bundle fooBundle = getIntent().getBundleExtra("transitionDataBundle");
 
         RouteFragment foo = new RouteFragment();
         Bundle transitionDataBundle = new Bundle();
