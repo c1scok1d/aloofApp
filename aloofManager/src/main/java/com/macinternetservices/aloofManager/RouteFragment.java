@@ -84,7 +84,7 @@ public class RouteFragment extends SupportMapFragment implements OnMapReadyCallb
             e.printStackTrace();
         }
 
-        long different = lastTransitionEndTime.getTime() - lastTransitionEndTime.getTime();
+       /* long different = lastTransitionEndTime.getTime() - lastTransitionEndTime.getTime();
 
         long secondsInMilli = 1000;
         //long minutesInMilli = secondsInMilli * 60;
@@ -98,17 +98,14 @@ public class RouteFragment extends SupportMapFragment implements OnMapReadyCallb
         different = different % hoursInMilli;
 
         long elapsedMinutes = different / minutesInMilli;
-        different = different % minutesInMilli; */
+        different = different % minutesInMilli;
 
-        long elapsedSeconds = different / secondsInMilli;
+        long elapsedSeconds = different / secondsInMilli; */
         LatLngBounds.Builder latLngBoundsBuilder = new LatLngBounds.Builder();
 
         dataModels= new ArrayList<>();
         final MainApplication application = (MainApplication) getActivity().getApplication();
         application.getServiceAsync(new MainApplication.GetServiceCallback() {
-            /* String deviceId = "1051";
-            String lastTransitionEndTime = "2020-09-20T15:38:01Z";
-            String lastTransitionEndTime = "2020-09-20T16:00:05Z"; */
 
             @Override
             public void onServiceReady(OkHttpClient client, Retrofit retrofit, WebService service) {
@@ -122,14 +119,14 @@ public class RouteFragment extends SupportMapFragment implements OnMapReadyCallb
                             if (position != null) {
                                 latLngBoundsBuilder.include(new LatLng(position.getLatitude(), position.getLongitude()));
                                 polyline = map.addPolyline(polylineOptions.clickable(true).add(new LatLng(position.getLatitude(), position.getLongitude())));
-                                LatLng foo = new LatLng(position.getLatitude(), position.getLongitude());
+                                //LatLng foo = new LatLng(position.getLatitude(), position.getLongitude());
                                 polylineOptions.add(new LatLng(position.getLatitude(), position.getLongitude()));
                             } else {
                                 Toast.makeText(getContext(), "No points to display", Toast.LENGTH_LONG).show();
                             }
                         }
                         map.animateCamera(CameraUpdateFactory.zoomTo(16));
-                        map.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBoundsBuilder.build(),100));
+                        map.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBoundsBuilder.build(), 100));
                     }
                 });
 
