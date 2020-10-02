@@ -44,7 +44,7 @@ public class RouteActivity extends AppCompatActivity {
         RouteFragment foo = new RouteFragment();
         Bundle transitionDataBundle = new Bundle();
         transitionDataBundle.putString("lastTransitionEndTime", points.getlastTransitionEndTime());
-        transitionDataBundle.putString("lastTransitionStartTime", points.getlastTransitionEndTime());
+        transitionDataBundle.putString("lastTransitionStartTime", points.getlastTransitionStartTime());
         transitionDataBundle.putString("deviceId", points.getDeviceId());
 
         foo.setArguments(transitionDataBundle);
