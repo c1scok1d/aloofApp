@@ -307,12 +307,12 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
 
         createNotificationChannel(mContext);
 
-        long different = lastTransitionStartTime.getTime() - lastTransitionEndTime.getTime();
+        long different = lastTransitionEndTime.getTime() - lastTransitionStartTime.getTime();
         long secondsInMilli = 1000;
         long minutesInMilli = secondsInMilli * 60;
         long elapsedMinutes = different / minutesInMilli;
 
-        if(elapsedMinutes >= 3){
+        //if(elapsedMinutes >= 3){
             Intent notificationIntent = new Intent(mContext, RouteActivity.class); //start route activity put start/end time as intent extras
             Points foo = new Points(fmt.format(lastTransitionEndTime),fmt.format(lastTransitionStartTime), deviceId);
             Bundle transitionDataBundle = new Bundle();
@@ -326,14 +326,15 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
                     0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             Notification notification = new NotificationCompat.Builder(mContext, CHANNEL_ID)
                     .setContentTitle(message)
-                    .setContentText(message2+"\nTap for route")
+                    .setContentText(message2)
+                    .setContentText("Tap for route...")
                     .setSmallIcon(R.mipmap.ic_logo)
                     .setContentIntent(pendingIntent)
                     .build();
             NotificationManager notifManager =
                     (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
             notifManager.notify(new Random().nextInt(), notification);
-        } else {
+       /* } else {
             Notification notification = new NotificationCompat.Builder(mContext, CHANNEL_ID)
                     .setContentTitle(message)
                     .setContentText(message2)
@@ -342,7 +343,7 @@ public class ActivityTransitionBroadcastReceiver extends BroadcastReceiver {
             NotificationManager notifManager =
                     (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
             notifManager.notify(new Random().nextInt(), notification);
-        }
+        } */
     }
 
     private void transitionStillNotification(final Context mContext,final String message){
