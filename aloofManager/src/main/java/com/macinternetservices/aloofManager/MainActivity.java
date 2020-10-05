@@ -20,6 +20,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.GONE);
         setSupportActionBar(toolbar);
 
         if (savedInstanceState == null) {
