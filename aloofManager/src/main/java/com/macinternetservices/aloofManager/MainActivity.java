@@ -20,6 +20,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,11 +28,14 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.macinternetservices.aloofManager.R;
+
+import java.security.ProtectionDomain;
 //import static org.traccar.manager.TransitionService.mContext;
 
 public class MainActivity extends AppCompatActivity {
     //TelephonyManager telephonyManager;
     //public static String identifier;
+    public static ProgressBar progressBar;
 
 
     @Override
@@ -41,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 //        identifier = telephonyManager.getDeviceId();
         setContentView(R.layout.activity_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        progressBar = findViewById(R.id.progressBar);
         setSupportActionBar(toolbar);
 
         if (savedInstanceState == null) {
