@@ -241,9 +241,8 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
 
     private void initPreferences() {
         PreferenceManager.setDefaultValues(getActivity(), R.xml.preferences, false);
-
-        TelephonyManager tMgr = (TelephonyManager)getContext().getSystemService(Context.TELEPHONY_SERVICE);
-        @SuppressLint("MissingPermission") String mPhoneNumber = tMgr.getLine1Number();
+        /* TelephonyManager tMgr = (TelephonyManager)getContext().getSystemService(Context.TELEPHONY_SERVICE);
+//        @SuppressLint("MissingPermission") String mPhoneNumber = tMgr.getLine1Number(); */
 
         if (!sharedPreferences.contains(KEY_DEVICE)) {
             String id = String.valueOf(new Random().nextInt(900000) + 100000);
