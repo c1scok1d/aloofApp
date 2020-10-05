@@ -42,6 +42,7 @@ public class TrackingService extends Service {
 
     private PowerManager.WakeLock wakeLock;
     private TrackingController trackingController;
+    public static boolean clientRunning = false;
 
     public static final String CHANNEL_ID = "Client Channel";
     private void createNotificationChannel(final Context mContext) {
@@ -107,6 +108,7 @@ public class TrackingService extends Service {
 
             trackingController = new TrackingController(this);
             trackingController.start();
+            clientRunning = true;
             //addTransitionAlerts();
         }
 
@@ -142,5 +144,6 @@ public class TrackingService extends Service {
         if (trackingController != null) {
             trackingController.stop();
         }
+        clientRunning = false;
     }
 }
