@@ -128,6 +128,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     Boolean firstRun = true;
     Boolean transitionAlert = false;
     public static String trackedDevice;
+    static Boolean isDestroyed, isStopped = false;
 
     private ViewGroup infoWindow;
     private TextView infoTitle, infoSnippet, tvShowGeofences, tvAddGeofence, tvDelGeofence;
@@ -668,7 +669,10 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                 return false;
             }
         });
-        createWebSocket();
+
+         if (webSocket == null) {
+            createWebSocket();
+        }
 
         Intent geofenceIntent = new Intent(getContext(), LocationService.class);
         ContextCompat.startForegroundService(getActivity(), geofenceIntent);
@@ -863,7 +867,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     private void handleMessage(String message) throws IOException {
         Log.e("handleMessage","Message: "+message);
         Update update = objectMapper.readValue(message, Update.class);
-        if (update != null && update.positions != null) {
+        if (update != null && update.positions != null && !isStopped) {
             MainActivity.progressBar.setVisibility(View.GONE);
             //LatLngBounds.Builder bounds = LatLngBounds.builder();
             // add map marker for each device
@@ -910,24 +914,37 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                             .setPositiveButton(android.R.string.ok, null)
                             .show();
                 }
-                if(devices.get(deviceId).getStatus().equals("online")){
+                /*if(devices.get(deviceId).getStatus().equals("online")){
                     iv_online.setVisibility(View.VISIBLE);
 					iv_offline.setVisibility(View.GONE);
                 } else {
                     iv_offline.setVisibility(View.VISIBLE);
                     iv_online.setVisibility(View.GONE);
-                }
+                } */
             }
-			firstRun = false;				 
+			//firstRun = false;
         }
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        isStopped = true;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        if (webSocket != null) {
+        isStopped = true;
+        /*if (webSocket != null) {
             webSocket.cancel();
-        }
+        }*/
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        isStopped = false;
     }
 
     private void reconnectWebSocket() {
