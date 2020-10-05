@@ -110,7 +110,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
 
     public static final int REQUEST_DEVICE = 1;
     public static final int RESULT_SUCCESS = 1;
-    private final int GEOFENCE_REQ_CODE = 0;
+
 
     public static GoogleMap map;
 
@@ -166,7 +166,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         getMapAsync(this);
-
+        progressBar.setVisibility(View.VISIBLE);
         // We want to reuse the info window for all the markers,
         // so let's create only one class member instance
         infoWindow = (ViewGroup) getLayoutInflater().inflate(R.layout.view_info, null);
@@ -756,10 +756,10 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         }
         speed = position.getSpeed() * factor;
 
-        // get address for device lat/lng from google api
-        Geocoder geocoder;
+        //get address for device lat/lng from google api
+        //Geocoder geocoder;
         List<Address> addresses;
-        geocoder = new Geocoder(getContext(), Locale.getDefault());
+        Geocoder geocoder = new Geocoder(getContext(), Locale.US);
         address = "address";
         bldgno = "bldgno";
         street = "street";
@@ -868,7 +868,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         Log.e("handleMessage","Message: "+message);
         Update update = objectMapper.readValue(message, Update.class);
         if (update != null && update.positions != null && !isStopped) {
-            MainActivity.progressBar.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
             //LatLngBounds.Builder bounds = LatLngBounds.builder();
             // add map marker for each device
             for (Position position : update.positions) {
@@ -894,13 +894,13 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                         map.animateCamera(zoom);
                         marker.showInfoWindow();
                         //break;
-                    } else /* if (firstRun)*/ {
+                    } else {
                         LatLngBounds bounds = latLngBoundsBuilder.build();
                         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude));
                         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
                         map.moveCamera(center);
                         map.animateCamera(zoom);
-                        //map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds,100));
+                        map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds,100));
                     }
                     marker.setIcon(BitmapDescriptorFactory.defaultMarker(new Random().nextInt(360))); // make each marker a random color
                     positions.put(deviceId, position); // add to positions array
@@ -914,15 +914,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                             .setPositiveButton(android.R.string.ok, null)
                             .show();
                 }
-                /*if(devices.get(deviceId).getStatus().equals("online")){
-                    iv_online.setVisibility(View.VISIBLE);
-					iv_offline.setVisibility(View.GONE);
-                } else {
-                    iv_offline.setVisibility(View.VISIBLE);
-                    iv_online.setVisibility(View.GONE);
-                } */
             }
-			//firstRun = false;
         }
     }
 
