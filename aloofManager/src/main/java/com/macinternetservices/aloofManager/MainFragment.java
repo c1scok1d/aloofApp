@@ -16,6 +16,7 @@
 package com.macinternetservices.aloofManager;
 
 import android.annotation.SuppressLint;
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -44,6 +45,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -70,6 +72,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.macinternetservices.aloofClient.StatusActivity;
+import com.macinternetservices.aloofClient.TrackingService;
 import com.macinternetservices.aloofManager.model.DataModel;
 import com.macinternetservices.aloofManager.model.Device;
 import com.macinternetservices.aloofManager.model.GeoLoc;
@@ -155,6 +158,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     String knownName = null;
     Boolean twelveHourFormat = true;
     SharedPreferences preferences;
+    ProgressBar progressBar = MainActivity.progressBar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -192,7 +196,10 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         if (!preferences.contains(PREFERENCE_12HR_FORMAT)) {
             preferences.edit().putBoolean(PREFERENCE_12HR_FORMAT, true).apply();
         }
-        startClient(getContext());
+        if(!TrackingService.clientRunning){
+            startClient(getContext());
+        }
+
     }
 
     private void startClient(Context context){
@@ -854,9 +861,10 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     public static ArrayList<DataModel> allDevicesArray = new ArrayList<>();
     //handle device api data
     private void handleMessage(String message) throws IOException {
-        Log.e("MainFragment","Message: "+message);
+        Log.e("handleMessage","Message: "+message);
         Update update = objectMapper.readValue(message, Update.class);
         if (update != null && update.positions != null) {
+            MainActivity.progressBar.setVisibility(View.GONE);
             //LatLngBounds.Builder bounds = LatLngBounds.builder();
             // add map marker for each device
             for (Position position : update.positions) {
@@ -875,7 +883,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                     marker.setSnippet(formatDetails(position)); //set device details
                     //String foo = devices.get(deviceId).getName();
 
-                   if(tracking && devices.get(deviceId).equals(trackedDevice)) { // if tracking do not update view
+                   if(tracking && devices.get(deviceId).getName().equals(trackedDevice)) { // if tracking do not update view
                         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude));
                         CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
                         map.moveCamera(center);
