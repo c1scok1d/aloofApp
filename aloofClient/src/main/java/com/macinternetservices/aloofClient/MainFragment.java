@@ -216,6 +216,7 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
         if (key.equals(KEY_STATUS)) {
             if (sharedPreferences.getBoolean(KEY_STATUS, false)) {
                 startTrackingService(true, false);
+                //startTransitionService();
             } else {
                 stopTrackingService();
             }
@@ -274,6 +275,7 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
         if (permission) {
             setPreferencesEnabled(false);
             ContextCompat.startForegroundService(getContext(), new Intent(getActivity(), TrackingService.class));
+            ContextCompat.startForegroundService(getContext(), new Intent(getActivity(), TransitionController.class));
             alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                     ALARM_MANAGER_INTERVAL, ALARM_MANAGER_INTERVAL, alarmIntent);
         } else {
@@ -286,6 +288,7 @@ public class MainFragment extends PreferenceFragmentCompat implements OnSharedPr
     private void stopTrackingService() {
         alarmManager.cancel(alarmIntent);
         getActivity().stopService(new Intent(getActivity(), TrackingService.class));
+        getActivity().stopService(new Intent(getActivity(), TransitionController.class));
         setPreferencesEnabled(true);
     }
 
