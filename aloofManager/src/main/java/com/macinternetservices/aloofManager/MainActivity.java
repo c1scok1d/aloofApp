@@ -36,7 +36,7 @@ import java.security.ProtectionDomain;
 public class MainActivity extends AppCompatActivity {
     //TelephonyManager telephonyManager;
     //public static String identifier;
-    public static ProgressBar progressBar;
+    //public static ProgressBar progressBar;
 
 
     @Override
@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
 //        identifier = telephonyManager.getDeviceId();
         setContentView(R.layout.activity_layout);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        progressBar = findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.GONE);
+        //progressBar = findViewById(R.id.progressBar);
+        //progressBar.setVisibility(View.GONE);
         setSupportActionBar(toolbar);
 
         if (savedInstanceState == null) {
