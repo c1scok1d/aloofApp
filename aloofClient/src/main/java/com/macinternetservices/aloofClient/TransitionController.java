@@ -612,7 +612,7 @@ public class TransitionController extends Service {
             long elapsedMinutes = different / minutesInMilli;
 
             //if(elapsedMinutes >= 3){
-            /*Intent notificationIntent = new Intent(mContext, RouteActivity.class); //start route activity put start/end time as intent extras
+            Intent notificationIntent = new Intent(mContext, RouteActivity.class); //start route activity put start/end time as intent extras
             Points foo = new Points(fmt.format(lastTransitionEndTime),fmt.format(lastTransitionStartTime), deviceId);
             Bundle transitionDataBundle = new Bundle();
             transitionDataBundle.putString("lastTransitionEndTime", lastTransitionEndTime.toString());
@@ -622,7 +622,7 @@ public class TransitionController extends Service {
             notificationIntent.putExtra("transitionData", foo);
 
             PendingIntent pendingIntent = PendingIntent.getActivity(mContext,
-                    0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT); */
+                    0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
             Notification notification = new NotificationCompat.Builder(mContext, CHANNEL_ID)
                     .setContentTitle(message)
                     .setContentText(message2)
