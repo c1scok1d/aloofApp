@@ -44,6 +44,9 @@
         </activity-alias >
 
         <activity android:name=".StatusActivity"/>
+        <activity android:name=".PermissionRationalActivity"/>
+
+
 
         <activity
             android:name=".ShortcutActivity"
@@ -58,8 +61,10 @@
             android:name=".TrackingService"
             android:foregroundServiceType="location" />
 
-        <!--service
-            android:name=".TrackingService$HideNotificationService" / -->
+        <service
+            android:name=".TransitionController"
+            android:foregroundServiceType="location" />
+
 
         <receiver android:name=".AutostartReceiver">
             <intent-filter>
