@@ -140,12 +140,15 @@ public class ShortcutActivity extends AppCompatActivity {
                     PreferenceManager.getDefaultSharedPreferences(this)
                             .edit().putBoolean(MainFragment.KEY_STATUS, true).apply();
                     ContextCompat.startForegroundService(this, new Intent(this, TrackingService.class));
+                    ContextCompat.startForegroundService(this, new Intent(this, TransitionController.class));
                     Toast.makeText(this, R.string.status_service_create, Toast.LENGTH_SHORT).show();
                     break;
                 case ACTION_STOP:
                     PreferenceManager.getDefaultSharedPreferences(this)
                             .edit().putBoolean(MainFragment.KEY_STATUS, false).apply();
                     stopService(new Intent(this, TrackingService.class));
+                    stopService(new Intent(this, TransitionController.class));
+
                     Toast.makeText(this, R.string.status_service_destroy, Toast.LENGTH_SHORT).show();
                     break;
                 case ACTION_SOS:
