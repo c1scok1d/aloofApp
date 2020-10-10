@@ -113,6 +113,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
 
 
     public static GoogleMap map;
+    Geocoder geocoder;
 
     private Handler handler = new Handler();
     private ObjectMapper objectMapper = new ObjectMapper();
@@ -126,7 +127,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     public static Boolean dautle = false;
     Boolean batAlert = false;
     Boolean firstRun = true;
-    Boolean transitionAlert = false;
+    //Boolean transitionAlert = false;
     public static String trackedDevice;
     static Boolean isDestroyed, isStopped = false;
 
@@ -159,14 +160,14 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     String knownName = null;
     Boolean twelveHourFormat = true;
     SharedPreferences preferences;
-    ProgressBar progressBar = MainActivity.progressBar;
-
+    public MainActivity  activity;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         getMapAsync(this);
-        progressBar.setVisibility(View.VISIBLE);
+        this.activity = activity;
+        //progressBar.setVisibility(View.VISIBLE);
         // We want to reuse the info window for all the markers,
         // so let's create only one class member instance
         infoWindow = (ViewGroup) getLayoutInflater().inflate(R.layout.view_info, null);
@@ -200,6 +201,9 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         if(!TrackingService.clientRunning){
             startClient(getContext());
         }
+        //if(webSocket == null) {
+            //createWebSocket();
+        //}
 
     }
 
@@ -213,7 +217,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                     ...avoid setting flags as it will interfere with normal flow of event and history stack.
                     find a better way to do this
                     */
-            clientIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            clientIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(clientIntent );
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -365,13 +369,13 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                     }
                 });
                 break;
-            case R.id.action_transition:
+            /*case R.id.action_transition:
                 if(!transitionAlert) {
                     addTransitionAlerts();
                 } else {
                     Toast.makeText(getContext(), "Transition alerts are active", Toast.LENGTH_SHORT).show();
                 }
-                break;
+                break;*/
             case R.id.action_logout:
                 PreferenceManager.getDefaultSharedPreferences(getContext())
                         .edit().putBoolean(MainApplication.PREFERENCE_AUTHENTICATED, false).apply();
@@ -383,7 +387,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         return super.onOptionsItemSelected(item);
     }
 
-    private void addTransitionAlerts(){
+   /* private void addTransitionAlerts(){
         List<ActivityTransition> transitions = new ArrayList<>();
 
         transitions.add(
@@ -476,9 +480,9 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         );
         transitionAlert = true;
 
-    }
+    } */
 
-    public static final String CHANNEL_ID = "Transition Service Channel";
+   /* public static final String CHANNEL_ID = "Transition Service Channel";
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel serviceChannel = new NotificationChannel(
@@ -489,7 +493,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
             NotificationManager manager = getContext().getSystemService(NotificationManager.class);
             manager.createNotificationChannel(serviceChannel);
         }
-    }
+    } */
 
     class DeleteAllTask extends AsyncTask<Void, Void, Void> {
 
@@ -675,10 +679,10 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         }
 
         Intent geofenceIntent = new Intent(getContext(), LocationService.class);
-        ContextCompat.startForegroundService(getActivity(), geofenceIntent);
+        ContextCompat.startForegroundService(getContext(), geofenceIntent);
 
-        Intent transitionIntent = new Intent(getContext(), ActivityTransitionBroadcastReceiver.class);
-        ContextCompat.startForegroundService(getActivity(), transitionIntent);
+        /*Intent transitionIntent = new Intent(getContext(), ActivityTransitionBroadcastReceiver.class);
+        ContextCompat.startForegroundService(getActivity(), transitionIntent); */
 
         //Intent transitionServiceIntent = new Intent(getContext(), TransitionService.class);
         //ContextCompat.startForegroundService(getActivity(), transitionServiceIntent);
@@ -759,7 +763,7 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
         //get address for device lat/lng from google api
         //Geocoder geocoder;
         List<Address> addresses;
-        Geocoder geocoder = new Geocoder(getContext(), Locale.US);
+        Geocoder geocoder = new Geocoder(getContext(), Locale.getDefault());
         address = "address";
         bldgno = "bldgno";
         street = "street";
@@ -861,17 +865,40 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     }
 
     public static LatLngBounds.Builder latLngBoundsBuilder = new LatLngBounds.Builder();
-
     public static ArrayList<DataModel> allDevicesArray = new ArrayList<>();
     //handle device api data
     private void handleMessage(String message) throws IOException {
         Log.e("handleMessage","Message: "+message);
         Update update = objectMapper.readValue(message, Update.class);
         if (update != null && update.positions != null && !isStopped) {
-            progressBar.setVisibility(View.GONE);
+
+            //progressBar.setVisibility(View.GONE);
             //LatLngBounds.Builder bounds = LatLngBounds.builder();
             // add map marker for each device
             for (Position position : update.positions) {
+               /* List<Address> addresses;
+                //geocoder = new Geocoder(context, Locale.US);
+                address = "address";
+                bldgno = "bldgno";
+                street = "street";
+                city = "city";
+                state = "state";
+                postalCode = "zipcode";
+                country = null;
+                knownName = null;
+                try {
+                    addresses = geocoder.getFromLocation(position.getLatitude(), position.getLongitude(), 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+                    address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+                    bldgno = addresses.get(0).getSubThoroughfare(); // building number
+                    street = addresses.get(0).getThoroughfare(); //street name
+                    city = addresses.get(0).getLocality();
+                    state = addresses.get(0).getAdminArea();
+                    country = addresses.get(0).getCountryName();
+                    postalCode = addresses.get(0).getPostalCode();
+                    knownName = addresses.get(0).getFeatureName(); // Only if available else return NULL
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } */
                 long deviceId = position.getDeviceId(); //deviceId
                 if (devices.containsKey(deviceId)) {
                     //LatLng location = new LatLng(position.getLatitude(), position.getLongitude()); // get device lat/lng
@@ -895,25 +922,25 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
                         marker.showInfoWindow();
                         //break;
                     } else {
-                        LatLngBounds bounds = latLngBoundsBuilder.build();
-                        CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude));
-                        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-                        map.moveCamera(center);
-                        map.animateCamera(zoom);
-                        map.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds,100));
+                       LatLngBounds bounds = latLngBoundsBuilder.build();
+                       //CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(marker.getPosition().latitude, marker.getPosition().longitude));
+                       CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+                       //map.moveCamera(center);
+                       map.animateCamera(zoom);
+                       map.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds,100));
                     }
                     marker.setIcon(BitmapDescriptorFactory.defaultMarker(new Random().nextInt(360))); // make each marker a random color
                     positions.put(deviceId, position); // add to positions array
                 }
                 // alert on low battery
-                if (position.getAttributes().getBatteryLevel() <= 25.0 && !batAlert) {
+               /* if (position.getAttributes().getBatteryLevel() <= 25.0 && !batAlert) {
                     batAlert = true;
                     new AlertDialog.Builder(getContext())
                             .setTitle("Low Battery Alert")
                             .setMessage(devices.get(deviceId).getName() + " has " + position.getAttributes().getBatteryLevel() + "% battery charge")
                             .setPositiveButton(android.R.string.ok, null)
                             .show();
-                }
+                } */
             }
         }
     }
@@ -936,6 +963,9 @@ public class MainFragment extends SupportMapFragment implements OnMapReadyCallba
     @Override
     public void onResume() {
         super.onResume();
+        //if(webSocket == null){
+            //createWebSocket();
+        //}
         isStopped = false;
     }
 
